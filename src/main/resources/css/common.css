@@ -50,6 +50,11 @@ img.top-image {
    background-color: #ddd;
    color: black;
  }
+
+ .sidebar {
+   background-color: #ddd;
+   padding: 10px;
+ }
  
  /* Style the content */
  .content {
