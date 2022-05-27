@@ -26,7 +26,7 @@ public class PageIndex implements Handler {
         // First we need to use your JDBCConnection class
         JDBCConnection jdbc = new JDBCConnection();
 
-        // get shit from the database
+        // Get stuff from the database
         ArrayList<Movie> movies = jdbc.getMovies();
 
         // the context stuff we put in the template
