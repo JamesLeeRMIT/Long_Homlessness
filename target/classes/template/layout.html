@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot Sample Site</title>
+    <meta name="description" content="common-meta">
+    <script th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="container">
+    <div class="inner">
+        <div class="body header">
+            <div class="apptitle">Example</div>
+        </div>
+        <div class="body main">
+            <div layout:fragment="contents"></div>
+        </div>
+        <div class="body footer">
+            <footer style="text-align:center;">Common footer</footer>
+        </div>
+    </div>
+</div>
+</body>
+</html>

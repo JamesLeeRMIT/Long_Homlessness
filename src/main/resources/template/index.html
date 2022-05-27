@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>All Movies in my peinis </title>
+    <link rel='stylesheet' type='text/css' href='common.css' />
+</head>
+<body>
+<div layout:fragment="contents">
+    <div class='topnav'>
+        <a href='/'>Homepage</a>
+    </div>
+
+    <div class='header'>
+        <h1>
+            <img src='logo.png' class='top-image' alt='RMIT logo' height='75'>
+            Week 05 exercise index.html page
+        </h1>
+    </div>
+
+    <div class='content'>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Year</th>
+            <th>Genre</th>
+            </tr>
+          <tr th:each="movie : ${movies}">
+            <td th:text="${movie.name}">Onions</td>
+            <td th:text="${movie.year}">Onions</td>
+            <td th:text="${movie.genre}">Onions</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class='footer'>
+        <p>COSC2803 Module 0 - Week 05</p>
+    </div>
+</div>
+</body>
+</html>
