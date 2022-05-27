@@ -1,0 +1,22 @@
+Information about the population data set.
+
+This data set records the estimated number of people living in different Local Government Areas (LGAs) across Australia for the 2016 and 2018 calendar years. Population is estimated according to each individuals official residence.
+
+Local Government Area (LGAs) are designated by a unique code. Note that these codes do not necessarily correspond to suburbs or council areas. The *first digit* of the LGA code also provides the state or territory that the LGA is located within. These codes are:
+1 - NSW
+2 - Victoria
+3 - QLD
+4 - South Australia
+5 - Western Australia
+6 - Tasmania
+7 - Northern Territory
+8 - ACT
+9 - Other Australian Territories, including Offshore Island Territories, Jervis Bay Territory, and Australian Antarctic Territory.
+
+This data set records the estimated populations for two calendar years, 2016 and 2018.
+
+The following titles are
+ - lga_code: Unique code for the LGA
+ - lga_name: Name of the LGA
+ - 2016: Estimated population in the LGA for the 2016 calendar year.
+ - 2018: Estimated population in the LGA for the 2018 calendar year.

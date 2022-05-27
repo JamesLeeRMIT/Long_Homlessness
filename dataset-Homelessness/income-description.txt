@@ -1,0 +1,32 @@
+Information about the income data set.
+
+This data set records various household income and age demographic statistics people whose place of residence is in different Local Government Areas (LGAs) across Australia for the 2018 calendar year.
+
+Local Government Area (LGAs) are designated by a unique code. Note that these codes do not necessarily correspond to suburbs or council areas. The *first digit* of the LGA code also provides the state or territory that the LGA is located within. These codes are:
+1 - NSW
+2 - Victoria
+3 - QLD
+4 - South Australia
+5 - Western Australia
+6 - Tasmania
+7 - Northern Territory
+8 - ACT
+9 - Other Australian Territories, including Offshore Island Territories, Jervis Bay Territory, and Australian Antarctic Territory.
+
+This data is grouped by households. A household is a single fixed dwelling at which multiple people may reside. The value of the statistical data is not scaled by the size of the household.
+
+The income statistics are:
+ - Median Household Income (per week) - the statistical median income of all households within the LGA. This is the weekly repayment.
+ - Median Mortgage Repayment (per month) - the statistical median of all households within the LGA that make mortgage repayments on their properties. This is the monthly repayment.
+ - Median Rental Payment - the statistical median of all households within the LGA that make rental payments for their dwelling. his is the weekly repayment.
+
+The age demographic is the median age of all persons residing in the LGA.
+
+The following titles are
+ - lga_code: Unique code for the LGA
+ - lga_name: Name of the LGA
+ - year: Year the homeless data was collection (2018 for all rows in this data set)
+ - median_household_weekly_income: weekly household income
+ - median_mortgage_repay_monthly: monthly mortgage repayment
+ - median_rent_weekly: median weekly rent payments
+ - median_age: median age of all LGA residents
