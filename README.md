@@ -1,3 +1,3 @@
-# how do you do this 
+# Social Challenge: Tackling Homelessness
 
-## why you so bad 
+## For this group's RMIT Computer Science portfoio project
