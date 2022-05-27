@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>au.edu.rmit.cosc2803</groupId>
-    <artifactId>week05-pw</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <artifactId>Long_Homelesness</artifactId>
+    <version>0.1</version>
 
 
     <properties>
