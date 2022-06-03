@@ -116,6 +116,190 @@ public class JDBCConnection {
 
     }
 
+    public ArrayList<Income> getIncome() {
+        ArrayList<Income> datali = new ArrayList<Income>();
+
+        // Setup the variable for the JDBC connection
+        Connection connection = null;
+
+        try {
+            // Connect to JDBC data base
+            connection = DriverManager.getConnection(DATABASE);
+
+            // Prepare a new SQL Query & Set a timeout
+            Statement statement = connection.createStatement();
+            statement.setQueryTimeout(30);
+
+            // The Query
+            String query = "SELECT * FROM income";
+
+            // Get Result
+            ResultSet results = statement.executeQuery(query);
+
+            // Process all of the results
+            // The "results" variable is similar to an array
+            // We can iterate through all of the database query results
+            while (results.next()) {
+                // Create a Movie Object
+                Income data = new Income();
+
+                // Lookup the columns we want, and set the movie object field
+                // BUT, we must be careful of the column type!
+                data.lga_code = results.getInt("lga_code");
+                data.lga_name = results.getString("lga_name");
+                data.median_household_weekly_income = results.getInt("median_household_weekly_income");
+                data.median_age = results.getInt("median_age");
+                data.median_mortgage_repay_monthly = results.getInt("median_mortgage_repay_monthly");
+                data.median_rent_weekly = results.getInt("median_rent_weekly");
+
+                // Add the movie object to the array
+                datali.add(data);
+            }
+
+            // Close the statement because we are done with it
+            statement.close();
+        } catch (SQLException e) {
+            // If there is an error, lets just pring the error
+            System.err.println(e.getMessage());
+        } finally {
+            // Safety code to cleanup
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                // connection close failed.
+                System.err.println(e.getMessage());
+            }
+        }
+
+        // Finally we return all of the movies
+        return datali;
+
+    }
+
+    public ArrayList<Location> getLocation() {
+        ArrayList<Location> datali = new ArrayList<Location>();
+
+        // Setup the variable for the JDBC connection
+        Connection connection = null;
+
+        try {
+            // Connect to JDBC data base
+            connection = DriverManager.getConnection(DATABASE);
+
+            // Prepare a new SQL Query & Set a timeout
+            Statement statement = connection.createStatement();
+            statement.setQueryTimeout(30);
+
+            // The Query
+            String query = "SELECT * FROM location";
+
+            // Get Result
+            ResultSet results = statement.executeQuery(query);
+
+            // Process all of the results
+            // The "results" variable is similar to an array
+            // We can iterate through all of the database query results
+            while (results.next()) {
+                // Create a Movie Object
+                Location data = new Location();
+
+                // Lookup the columns we want, and set the movie object field
+                // BUT, we must be careful of the column type!
+                data.lga_code = results.getInt("lga_code");
+                data.lga_name = results.getString("lga_name");
+                data.lga_type = results.getString("lga_type");
+                data.area_sqkm4 = results.getString("area_sqkm4");
+                data.latitude = results.getString("latitude");
+                data.longitude = results.getString("longitude");
+
+                // Add the movie object to the array
+                datali.add(data);
+            }
+
+            // Close the statement because we are done with it
+            statement.close();
+        } catch (SQLException e) {
+            // If there is an error, lets just pring the error
+            System.err.println(e.getMessage());
+        } finally {
+            // Safety code to cleanup
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                // connection close failed.
+                System.err.println(e.getMessage());
+            }
+        }
+
+        // Finally we return all of the movies
+        return datali;
+
+    }
+
+    public ArrayList<Population> getPopulation() {
+        ArrayList<Population> datali = new ArrayList<Population>();
+
+        // Setup the variable for the JDBC connection
+        Connection connection = null;
+
+        try {
+            // Connect to JDBC data base
+            connection = DriverManager.getConnection(DATABASE);
+
+            // Prepare a new SQL Query & Set a timeout
+            Statement statement = connection.createStatement();
+            statement.setQueryTimeout(30);
+
+            // The Query
+            String query = "SELECT * FROM population";
+
+            // Get Result
+            ResultSet results = statement.executeQuery(query);
+
+            // Process all of the results
+            // The "results" variable is similar to an array
+            // We can iterate through all of the database query results
+            while (results.next()) {
+                // Create a Movie Object
+                Population data = new Population();
+
+                // Lookup the columns we want, and set the movie object field
+                // BUT, we must be careful of the column type!
+                data.lga_code = results.getInt("lga_code");
+                data.lga_name = results.getString("lga_name");
+                data.y2016 = results.getInt("2016");
+                data.y2018 = results.getInt("2018");
+
+
+                // Add the movie object to the array
+                datali.add(data);
+            }
+
+            // Close the statement because we are done with it
+            statement.close();
+        } catch (SQLException e) {
+            // If there is an error, lets just pring the error
+            System.err.println(e.getMessage());
+        } finally {
+            // Safety code to cleanup
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                // connection close failed.
+                System.err.println(e.getMessage());
+            }
+        }
+
+        // Finally we return all of the movies
+        return datali;
+
+    }
 
 
     // TODO: Keep adding more methods here to answer all of the questions from the Studio Class activities
