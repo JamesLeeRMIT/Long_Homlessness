@@ -15,7 +15,7 @@ import java.util.HashMap;
  * @author Timothy Wiley, 2021. email: timothy.wiley@rmit.edu.au
  * @author Santha Sumanasekara, 2021. email: santha.sumanasekara@rmit.edu.au
  */
-public class PageIndex implements Handler {
+public class PageMain implements Handler {
 
     // URL of this page relative to http://localhost:7001/
     public static final String URL = "/";
@@ -27,14 +27,14 @@ public class PageIndex implements Handler {
         JDBCConnection jdbc = new JDBCConnection();
 
         // Get stuff from the database
-        ArrayList<Homeless> homeies = jdbc.getHomeless();
+        ArrayList<Movie> movies = jdbc.getMovies();
 
         // the context stuff we put in the template
         HashMap<String, Object> model = new HashMap<>();
-        model.put("movies", homeies);
+        model.put("movies", movies);
 
-        // render the template
-        context.render("template/index.html", model);
+        // render the template 
+        context.render("pages/main.html", model);
     }
 
 }
