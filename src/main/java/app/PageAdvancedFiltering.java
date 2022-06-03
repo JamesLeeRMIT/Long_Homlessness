@@ -15,10 +15,10 @@ import java.util.HashMap;
  * @author Timothy Wiley, 2021. email: timothy.wiley@rmit.edu.au
  * @author Santha Sumanasekara, 2021. email: santha.sumanasekara@rmit.edu.au
  */
-public class PageAdvancedfiltering implements Handler {
+public class PageAdvancedFiltering implements Handler {
 
     // URL of this page relative to http://localhost:7001/
-    public static final String URL = "/advanced_filtering";
+    public static final String URL = "/advanced";
 
     @Override
     public void handle(Context context) throws Exception {
@@ -34,7 +34,7 @@ public class PageAdvancedfiltering implements Handler {
         model.put("movies", movies);
 
         // render the template 
-        context.render("pages/advanced_filtering", model);
+        context.render("pages/advanced_filtering.html", model);
     }
 
 }

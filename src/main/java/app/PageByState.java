@@ -18,7 +18,7 @@ import java.util.HashMap;
 public class PageByState implements Handler {
 
     // URL of this page relative to http://localhost:7001/
-    public static final String URL = "/by_state";
+    public static final String URL = "/state";
 
     @Override
     public void handle(Context context) throws Exception {

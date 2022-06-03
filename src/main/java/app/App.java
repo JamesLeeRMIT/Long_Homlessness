@@ -41,7 +41,7 @@ public class App {
         app.get(PageMain.URL, new PageMain());
         app.get(PageByState.URL, new PageByState());
         app.get(PageByCity.URL, new PageByCity());
-        app.get(PageAdvancedfiltering.URL, new PageAdvancedfiltering());
+        app.get(PageAdvancedFiltering.URL, new PageAdvancedFiltering());
         app.get(PageMission.URL, new PageMission());
     }
 
