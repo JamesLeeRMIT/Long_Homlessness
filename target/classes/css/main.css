@@ -85,6 +85,14 @@ CSS Layout from W3Schools: https://www.w3schools.com/howto/howto_css_fixed_sideb
   background-color: #ddd;
   padding: 0px 10px;
 }
+
+.fact {
+  display: inline-block;
+  word-wrap: normal;
+  width: 20%;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
  
  /* Style the footer */
  .footer-nsb {
