@@ -27,13 +27,13 @@ public class PageIndex implements Handler {
         JDBCConnection jdbc = new JDBCConnection();
 
         // Get stuff from the database
-        ArrayList<Movie> movies = jdbc.getMovies();
+        ArrayList<Homeless> homeies = jdbc.getHomeless();
 
         // the context stuff we put in the template
         HashMap<String, Object> model = new HashMap<>();
-        model.put("movies", movies);
+        model.put("movies", homeies);
 
-        // render the template 
+        // render the template
         context.render("template/index.html", model);
     }
 

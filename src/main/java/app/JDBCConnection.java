@@ -18,7 +18,7 @@ import java.sql.Statement;
 public class JDBCConnection {
 
     // Name of database file (contained in database folder)
-    private static final String DATABASE = "jdbc:sqlite:database/Movies.db";
+    private static final String DATABASE = "jdbc:sqlite:database/homie";
 
     /**
      * This creates a JDBC Object so we can keep talking to the database
@@ -27,14 +27,8 @@ public class JDBCConnection {
         System.out.println("Created JDBC Connection Object");
     }
 
-    /**
-     * Get all of the Movie Titles in the database
-     * @return
-     *    Returns an ArrayList of String with ONLY the movie titles
-     */
-    public ArrayList<String> getMovieTitles() {
-        // Create the ArrayList to return - of Strings for the movie titles
-        ArrayList<String> movies = new ArrayList<String>();
+    public ArrayList<Homeless> getHomeless() {
+        ArrayList<Homeless> datali = new ArrayList<Homeless>();
 
         // Setup the variable for the JDBC connection
         Connection connection = null;
@@ -48,68 +42,8 @@ public class JDBCConnection {
             statement.setQueryTimeout(30);
 
             // The Query
-            String query = "SELECT * FROM movie";
-            
-            // Get Result
-            ResultSet results = statement.executeQuery(query);
+            String query = "SELECT * FROM homeless";
 
-            // Process all of the results
-            // The "results" variable is similar to an array
-            // We can iterate through all of the database query results
-            while (results.next()) {
-                // We can lookup a column of the a single record in the
-                // result using the column name
-                // BUT, we must be careful of the column type!
-                String movieName     = results.getString("mvtitle");
-
-                // Store the movieName in the ArrayList to return
-                movies.add(movieName);
-            }
-
-            // Close the statement because we are done with it
-            statement.close();
-        } catch (SQLException e) {
-            // If there is an error, lets just pring the error
-            System.err.println(e.getMessage());
-        } finally {
-            // Safety code to cleanup
-            try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
-                // connection close failed.
-                System.err.println(e.getMessage());
-            }
-        }
-
-        // Finally we return all of the movie titles
-        return movies;
-    }
-
-    /**
-     * Get all of the Movies in the database.
-     * @return
-     *    Returns an ArrayList of Movie objects
-     */
-    public ArrayList<Movie> getMovies() {
-        // Create the ArrayList to return - this time of Movie objects
-        ArrayList<Movie> movies = new ArrayList<Movie>();
-
-        // Setup the variable for the JDBC connection
-        Connection connection = null;
-
-        try {
-            // Connect to JDBC data base
-            connection = DriverManager.getConnection(DATABASE);
-
-            // Prepare a new SQL Query & Set a timeout
-            Statement statement = connection.createStatement();
-            statement.setQueryTimeout(30);
-
-            // The Query
-            String query = "SELECT * FROM movie";
-            
             // Get Result
             ResultSet results = statement.executeQuery(query);
 
@@ -118,17 +52,46 @@ public class JDBCConnection {
             // We can iterate through all of the database query results
             while (results.next()) {
                 // Create a Movie Object
-                Movie movie = new Movie();
+                Homeless home = new Homeless();
 
                 // Lookup the columns we want, and set the movie object field
                 // BUT, we must be careful of the column type!
-                movie.id    = results.getInt("mvnumb");
-                movie.name  = results.getString("mvtitle");
-                movie.year  = results.getInt("yrmde");
-                movie.genre = results.getString("mvtype");
+                home.lga_code = results.getInt("lga_code");
+                home.lga_name = results.getString("lga_name");
+                home.year = results.getInt("year");
+                home.homeless_f_0_9 = results.getInt("homeless_f_0_9");
+                home.at_risk_f_0_9 = results.getInt("at_risk_f_0_9");
+                home.homeless_m_0_9 = results.getInt("homeless_m_0_9");
+                home.at_risk_m_0_9 = results.getInt("at_risk_m_0_9");
+                home.homeless_f_10_19 = results.getInt("homeless_f_10_19");
+                home.at_risk_f_10_19 = results.getInt("at_risk_f_10_19");
+                home.homeless_m_10_19 = results.getInt("homeless_m_10_19");
+                home.at_risk_m_10_19 = results.getInt("at_risk_m_10_19");
+                home.homeless_f_20_29 = results.getInt("homeless_f_20_29");
+                home.at_risk_f_20_29 = results.getInt("at_risk_f_20_29");
+                home.homeless_m_20_29 = results.getInt("homeless_m_20_29");
+                home.at_risk_m_20_29 = results.getInt("at_risk_m_20_29");
+                home.homeless_f_30_39 = results.getInt("homeless_f_30_39");
+                home.at_risk_f_30_39 = results.getInt("at_risk_f_30_39");
+                home.homeless_m_30_39 = results.getInt("homeless_m_30_39");
+                home.at_risk_m_30_39 = results.getInt("at_risk_m_30_39");
+                home.homeless_f_40_49 = results.getInt("homeless_f_40_49");
+                home.at_risk_f_40_49 = results.getInt("at_risk_f_40_49");
+                home.homeless_m_40_49 = results.getInt("homeless_m_40_49");
+                home.at_risk_m_40_49 = results.getInt("at_risk_m_40_49");
+                home.homeless_f_50_59 = results.getInt("homeless_f_50_59");
+                home.at_risk_f_50_59 = results.getInt("at_risk_f_50_59");
+                home.homeless_m_50_59 = results.getInt("homeless_m_50_59");
+                home.at_risk_m_50_59 = results.getInt("at_risk_m_50_59");
+                home.homeless_f_60_plus = results.getInt("homeless_f_60_plus");
+                home.at_risk_f_60_plus = results.getInt("at_risk_f_60_plus");
+                home.homeless_m_60_plus = results.getInt("homeless_m_60_plus");
+                home.at_risk_m_60_plus = results.getInt("at_risk_m_60_plus");
+                home.unknown_f = results.getInt("unknown_f");
+                home.unknown_m = results.getInt("unknown_m");
 
                 // Add the movie object to the array
-                movies.add(movie);
+                datali.add(home);
             }
 
             // Close the statement because we are done with it
@@ -149,81 +112,11 @@ public class JDBCConnection {
         }
 
         // Finally we return all of the movies
-        return movies;
+        return datali;
+
     }
 
 
-    /**
-     * Count the number of movies in the database
-     */
-    public int countMovies() {
-        int count = 0;
-
-        // TODO: fill in yourself
-
-        return count;
-    }
-
-    /**
-     * Get all the movies in the database by a given type.
-     * Note this takes a string of the type as an argument!
-     * This has been implemented for you as an example.
-     * HINT: you can use this to find all of the horror movies!
-     */
-    public ArrayList<Movie> getMoviesByType(String movieType) {
-        ArrayList<Movie> movies = new ArrayList<Movie>();
-
-        // Setup the variable for the JDBC connection
-        Connection connection = null;
-
-        try {
-            // Connect to JDBC data base
-            connection = DriverManager.getConnection(DATABASE);
-
-            // Prepare a new SQL Query & Set a timeout
-            Statement statement = connection.createStatement();
-            statement.setQueryTimeout(30);
-
-            // The Query
-            String query = "SELECT * FROM movie WHERE mvtype = '" + movieType + "'";
-            System.out.println(query);
-            
-            // Get Result
-            ResultSet results = statement.executeQuery(query);
-
-            // Process all of the results
-            while (results.next()) {
-                // Create a Movie Object
-                Movie movie = new Movie();
-
-                movie.id    = results.getInt("mvnumb");
-                movie.name  = results.getString("mvtitle");
-                movie.year  = results.getInt("yrmde");
-                movie.genre = results.getString("mvtype");
-
-                movies.add(movie);
-            }
-
-            // Close the statement because we are done with it
-            statement.close();
-        } catch (SQLException e) {
-            // If there is an error, lets just pring the error
-            System.err.println(e.getMessage());
-        } finally {
-            // Safety code to cleanup
-            try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
-                // connection close failed.
-                System.err.println(e.getMessage());
-            }
-        }
-
-        // Finally we return all of the movies
-        return movies;
-    }
 
     // TODO: Keep adding more methods here to answer all of the questions from the Studio Class activities
 }

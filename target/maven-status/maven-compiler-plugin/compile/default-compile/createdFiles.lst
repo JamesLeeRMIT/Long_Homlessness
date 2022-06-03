@@ -1,4 +1,5 @@
 app/Movie.class
+app/Homeless.class
 app/PageIndex.class
 app/App.class
 app/JDBCConnection.class
