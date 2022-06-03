@@ -89,11 +89,12 @@ CSS Layout from W3Schools: https://www.w3schools.com/howto/howto_css_fixed_sideb
 .fact {
   display: inline-block;
   word-wrap: normal;
-  width: 20%;
+  width: 200px;
   padding-top: 20px;
+  margin-left: 315px;
   box-sizing: border-box;
 }
- 
+
  /* Style the footer */
  .footer-nsb {
   background-color: #cccccc;
