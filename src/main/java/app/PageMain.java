@@ -27,13 +27,13 @@ public class PageMain implements Handler {
         JDBCConnection jdbc = new JDBCConnection();
 
         // Get stuff from the database
-        ArrayList<Movie> movies = jdbc.getMovies();
+
 
         // the context stuff we put in the template
         HashMap<String, Object> model = new HashMap<>();
-        model.put("movies", movies);
 
-        // render the template 
+
+        // render the template
         context.render("pages/main.html", model);
     }
 
