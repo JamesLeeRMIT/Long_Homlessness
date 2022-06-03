@@ -38,7 +38,11 @@ public class App {
 
     public static void configureRoutes(Javalin app) {
         // ADD ALL OF YOUR WEBPAGES HERE
-        app.get(PageIndex.URL, new PageIndex());
+        app.get(PageMain.URL, new PageMain());
+        app.get(PageByState.URL, new PageByState());
+        app.get(PageByCity.URL, new PageByCity());
+        app.get(PageAdvancedfiltering.URL, new PageAdvancedfiltering());
+        app.get(PageMission.URL, new PageMission());
     }
 
 }
