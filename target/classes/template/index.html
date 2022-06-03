@@ -3,42 +3,27 @@
         xmlns:th="http://www.thymeleaf.org"
         xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-    <title>All Movies in my peinis </title>
+    <title>Rethinking Homelessness: Home</title>
     <link rel='stylesheet' type='text/css' href='common.css' />
 </head>
 <body>
 <div layout:fragment="contents">
     <div class='topnav'>
-        <img src='logo.png' class='top-image' alt='RMIT logo' height='75'>
+        <img src='logo.png' class='left-image' alt='RMIT logo' height='75'>
         <a href='/'>Home</a>
         <a href='/'>Mission</a>
         <a href='/'>By State</a>
         <a href='/'>By City</a>
+        <a href='/' class = 'Advanced-Filtering'>Advanced Filtering</a>
     </div>
 
     <div class='sidebar'>
-
-    </div>
-
-    <div class='header'>
-        <h1>
-            
-        </h1>
+        <p>Sidebar stuff ig</p>
     </div>
 
     <div class='content'>
-        <table>
-          <tr>
-            <th>Name</th>
-            <th>Year</th>
-            <th>Genre</th>
-            </tr>
-          <tr th:each="movie : ${movies}">
-            <td th:text="${movie.name}">Onions</td>
-            <td th:text="${movie.year}">Onions</td>
-            <td th:text="${movie.genre}">Onions</td>
-            </tr>
-        </table>
+       
+        <h1>CONTENT THINGO</h1>
 
     </div>
 
