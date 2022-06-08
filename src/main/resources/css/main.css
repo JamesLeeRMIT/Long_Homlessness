@@ -100,3 +100,21 @@ CSS Layout from W3Schools: https://www.w3schools.com/howto/howto_css_fixed_sideb
   background-color: #cccccc;
   padding: 0px 10px;
 }
+
+.map {
+  display: inline-block;
+  margin-left: 290px;
+  margin-top: 100px;
+  padding-bottom: 70px;
+}
+
+.numbers {
+  box-sizing: border-box;
+  display: block;
+  margin-right: 600px;
+  margin-top:140px;
+  top: 0px;
+  text-size-adjust: 100px;
+  float: right;
+  text-align: center;
+}
