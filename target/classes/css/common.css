@@ -87,14 +87,16 @@ img.left-image {
   word-wrap: normal;
   width: 200px;
   padding-top: 20px;
-  margin-left: 300px;
+  margin-left: 127px;
   box-sizing: border-box;
   text-align: center;
+  left: 373px;
+  position: relative;
 }
 
 .map {
   display: inline-block;
-  margin-left: 366px;
+  margin-left: 473px;
   margin-top: 100px;
   padding-bottom: 70px;
 }
@@ -102,7 +104,7 @@ img.left-image {
 .numbers {
   box-sizing: border-box;
   display: inline-block;
-  margin-left: 51px;
+  margin-left: 81px;
   text-align: center;
   top: -70px;
   position: relative;
