@@ -28,7 +28,6 @@ public class PageBrowseLGAs implements Handler {
 
         // Get stuff from the database
 
-
         // the context stuff we put in the template
         HashMap<String, Object> model = new HashMap<>();
 
