@@ -112,10 +112,10 @@ img.left-image {
 .creators {
   display: inline-block;
   margin-top: 60px;
-  margin-left: 40px;
+  margin-left: 481px;
 }
 
-.creator {
+.creatorImg {
   height: 200px;
 }
 
@@ -128,9 +128,13 @@ img.left-image {
 .missionStatement {
   display: inline-block;
   position: relative;
-  left: 229px;
-  word-wrap: break-word;
+  left: 145px;
+  word-wrap: normal;
   box-sizing: border-box;
+  width: 50%;
+  text-align: center;
+  margin-right: 409px;
+  font-size: 20px;
 }
 
 .footer-nsb {
