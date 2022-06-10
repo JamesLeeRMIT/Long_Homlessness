@@ -18,7 +18,7 @@ import java.sql.Statement;
 public class JDBCConnection {
 
     // Name of database file (contained in database folder)
-    private static final String DATABASE = "jdbc:sqlite:database/homie";
+    private static final String DATABASE = "jdbc:sqlite:database/homeno.db";
 
     /**
      * This creates a JDBC Object so we can keep talking to the database
@@ -26,6 +26,43 @@ public class JDBCConnection {
     public JDBCConnection() {
         System.out.println("Created JDBC Connection Object");
     }
+
+
+    public void AddData(int lga_code, int year, int status, char sex, int age, int num) {
+        Connection connection = null;
+
+        try {
+            // Connect to JDBC data base
+            connection = DriverManager.getConnection(DATABASE);
+
+            // Prepare a new SQL Query & Set a timeout
+            Statement statement = connection.createStatement();
+            statement.setQueryTimeout(30);
+
+            // The Query
+            String query = "INSERT INTO data VALUES ("+ lga_code +", "+ year +", "+ status +", '"+ sex +"', "+ age +", "+ num +");";
+
+            // Get Result
+            ResultSet results = statement.executeQuery(query);
+
+            // Close the statement because we are done with it
+            statement.close();
+        } catch (SQLException e) {
+            // If there is an error, lets just pring the error
+            System.err.println(e.getMessage());
+        } finally {
+            // Safety code to cleanup
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                // connection close failed.
+                System.err.println(e.getMessage());
+            }
+        }
+    }
+
 
     public ArrayList<Homeless> getHomeless() {
         ArrayList<Homeless> datali = new ArrayList<Homeless>();
