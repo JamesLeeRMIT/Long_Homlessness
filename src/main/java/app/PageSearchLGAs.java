@@ -15,10 +15,10 @@ import java.util.HashMap;
  * @author Timothy Wiley, 2021. email: timothy.wiley@rmit.edu.au
  * @author Santha Sumanasekara, 2021. email: santha.sumanasekara@rmit.edu.au
  */
-public class PageByState implements Handler {
+public class PageSearchLGAs implements Handler {
 
     // URL of this page relative to http://localhost:7001/
-    public static final String URL = "/state";
+    public static final String URL = "/searchLGAs";
 
     @Override
     public void handle(Context context) throws Exception {
@@ -34,7 +34,7 @@ public class PageByState implements Handler {
 
 
         // render the template
-        context.render("pages/byState.html", model);
+        context.render("pages/searchLGAs.html", model);
     }
 
 }
