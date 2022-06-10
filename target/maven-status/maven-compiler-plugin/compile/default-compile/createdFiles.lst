@@ -1,6 +1,7 @@
 app/JDBCConnection.class
 app/Population.class
 app/Location.class
+app/ImportData.class
 app/Homeless.class
 app/Movie.class
 app/Income.class

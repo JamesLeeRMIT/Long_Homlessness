@@ -7,7 +7,7 @@ import io.javalin.core.util.RouteOverviewPlugin;
 /**
  * Main Application Class.
  * <p>
- * Running this class as regular java application will start the 
+ * Running this class as regular java application will start the
  * Javalin HTTP Server and our web application.
  *
  * @author Timothy Wiley, 2021. email: timothy.wiley@rmit.edu.au
@@ -23,7 +23,7 @@ public class App {
         // Create our HTTP server and listen in port 7001
         Javalin app = Javalin.create(config -> {
             config.registerPlugin(new RouteOverviewPlugin("/help/routes"));
-            
+
             // Uncomment this if you have files in the CSS Directory
             config.addStaticFiles(CSS_DIR);
 
