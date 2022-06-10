@@ -40,7 +40,7 @@ public class App {
         // ADD ALL OF YOUR WEBPAGES HERE
         app.get(PageMain.URL, new PageMain());
         app.get(PageByState.URL, new PageByState());
-        app.get(PageByCity.URL, new PageByCity());
+        app.get(PageByLGA.URL, new PageByLGA());
         app.get(PageAdvancedFiltering.URL, new PageAdvancedFiltering());
         app.get(PageMission.URL, new PageMission());
     }

@@ -34,7 +34,7 @@ public class PageByState implements Handler {
 
 
         // render the template
-        context.render("pages/by_state.html", model);
+        context.render("pages/byState.html", model);
     }
 
 }
