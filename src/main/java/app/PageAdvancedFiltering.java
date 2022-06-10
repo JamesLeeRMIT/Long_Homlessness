@@ -34,7 +34,7 @@ public class PageAdvancedFiltering implements Handler {
 
 
         // render the template
-        context.render("pages/advanced_filtering.html", model);
+        context.render("pages/advancedFiltering.html", model);
     }
 
 }
