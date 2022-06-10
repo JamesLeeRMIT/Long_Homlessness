@@ -47,13 +47,13 @@ img.left-image {
 }
 
 .sidenav {
-  height: 87%; /* Full-height: remove this if you want "auto" height */
-  width: 155px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  left: 7px; /* Stay on the left side */
-  background-color: #333; /* Topnav colour */
-  overflow-x: hidden; /* Disable horizontal scroll */
+  height: 87%; 
+  width: 155px; 
+  position: fixed; 
+  z-index: 1; 
+  left: 7px;
+  background-color: #333;
+  overflow-x: hidden;
   padding-top: 20px;
   margin: 10px;
   margin-top: 20px;
@@ -132,7 +132,7 @@ img.left-image {
   box-sizing: border-box;
   width: 50%;
   text-align: center;
-  margin-right: 409px;
+  margin-right: 510px;
   font-size: 20px;
 }
 
