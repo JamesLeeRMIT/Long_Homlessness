@@ -15,10 +15,10 @@ import java.util.HashMap;
  * @author Timothy Wiley, 2021. email: timothy.wiley@rmit.edu.au
  * @author Santha Sumanasekara, 2021. email: santha.sumanasekara@rmit.edu.au
  */
-public class PageAdvancedFiltering implements Handler {
+public class PageBrowseLGAs implements Handler {
 
     // URL of this page relative to http://localhost:7001/
-    public static final String URL = "/advanced";
+    public static final String URL = "/browseLGAs";
 
     @Override
     public void handle(Context context) throws Exception {
@@ -27,16 +27,13 @@ public class PageAdvancedFiltering implements Handler {
         JDBCConnection jdbc = new JDBCConnection();
 
         // Get stuff from the database
-        ArrayList<Homeless> homeli = new ArrayList<Homeless>();
-
-        homeli = jdbc.getAllHomeless();
 
         // the context stuff we put in the template
         HashMap<String, Object> model = new HashMap<>();
-        model.put("data", homeli);
+
 
         // render the template
-        context.render("pages/advancedFiltering.html", model);
+        context.render("pages/browseLGAs.html", model);
     }
 
 }
