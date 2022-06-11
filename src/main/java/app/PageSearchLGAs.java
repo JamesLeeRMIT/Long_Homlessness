@@ -18,7 +18,7 @@ import java.util.HashMap;
 public class PageSearchLGAs implements Handler {
 
     // URL of this page relative to http://localhost:7001/
-    public static final String URL = "/searchLGAs";
+    public static final String URL = "/search/*";
 
     @Override
     public void handle(Context context) throws Exception {
@@ -29,7 +29,11 @@ public class PageSearchLGAs implements Handler {
         // Get stuff from the database
         Homeless home = new Homeless();
 
-        home = jdbc.getLga(10130);
+        String lga_code = context.path();
+
+        home = jdbc.getLga(lga_code.substring(8));
+        System.out.println(lga_code.substring(8));
+
 
         // the context stuff we put in the template
         HashMap<String, Object> model = new HashMap<>();

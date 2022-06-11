@@ -40,7 +40,7 @@ public class App {
         // ADD ALL OF YOUR WEBPAGES HERE
         app.get(PageMain.URL, new PageMain());
         app.get(PageBrowseLGAs.URL, new PageBrowseLGAs());
-        app.get(PageSearchLGAs.URL, new PageSearchLGAs());
+        app.get("/search/*", new PageSearchLGAs());
         app.get(PageMission.URL, new PageMission());
     }
 

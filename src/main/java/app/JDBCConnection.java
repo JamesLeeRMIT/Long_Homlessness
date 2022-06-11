@@ -160,7 +160,7 @@ public class JDBCConnection {
     }
 
 
-    public Homeless getLga(int lga_code) {
+    public Homeless getLga(String lga_code) {
         Homeless home = new Homeless();
 
         // Setup the variable for the JDBC connection
