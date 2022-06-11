@@ -27,11 +27,13 @@ public class PageAdvancedFiltering implements Handler {
         JDBCConnection jdbc = new JDBCConnection();
 
         // Get stuff from the database
+        ArrayList<Homeless> homeli = new ArrayList<Homeless>();
 
+        homeli = jdbc.getAllHomeless();
 
         // the context stuff we put in the template
         HashMap<String, Object> model = new HashMap<>();
-
+        model.put("data", homeli);
 
         // render the template
         context.render("pages/advancedFiltering.html", model);

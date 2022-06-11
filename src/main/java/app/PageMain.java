@@ -26,12 +26,8 @@ public class PageMain implements Handler {
         // First we need to use your JDBCConnection class
         JDBCConnection jdbc = new JDBCConnection();
 
-        // Get stuff from the database
-
-
         // the context stuff we put in the template
         HashMap<String, Object> model = new HashMap<>();
-
 
         // render the template
         context.render("pages/main.html", model);

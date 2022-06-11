@@ -27,10 +27,13 @@ public class PageByState implements Handler {
         JDBCConnection jdbc = new JDBCConnection();
 
         // Get stuff from the database
+        Homeless home = new Homeless();
 
+        home = jdbc.getLga(10130);
 
         // the context stuff we put in the template
         HashMap<String, Object> model = new HashMap<>();
+        model.put("home", home);
 
 
         // render the template
