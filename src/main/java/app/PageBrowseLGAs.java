@@ -50,8 +50,13 @@ public class PageBrowseLGAs implements Handler {
         } else {
             // Get stuff from the database
 
+            ArrayList<Homeless> lgas = new ArrayList<Homeless>();
+
+            lgas = jdbc.getAllHomeless();
+
             // the context stuff we put in the template
             HashMap<String, Object> model = new HashMap<>();
+            model.put("lgas", lgas);
 
 
             // render the template

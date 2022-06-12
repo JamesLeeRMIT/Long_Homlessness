@@ -88,6 +88,9 @@ public class JDBCConnection {
             // The "results" variable is similar to an array
             // We can iterate through all of the database query results
             while (results.next()) {
+                Statement statement2 = connection.createStatement();
+                statement2.setQueryTimeout(30);
+
                 // Create a Movie Object
                 Homeless home = new Homeless();
 
@@ -112,7 +115,7 @@ public class JDBCConnection {
                 query = "Select * from data where lga_code =" + home.lga_code;
 
                 // Get Result
-                ResultSet datares = statement.executeQuery(query);
+                ResultSet datares = statement2.executeQuery(query);
 
                 while (datares.next()) {
                     Data data = new Data();
@@ -135,6 +138,7 @@ public class JDBCConnection {
 
                 // Add the movie object to the array
                 homeli.add(home);
+                statement2.close();
             }
 
             // Close the statement because we are done with it
