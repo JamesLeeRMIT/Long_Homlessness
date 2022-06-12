@@ -38,9 +38,9 @@ public class App {
 
     public static void configureRoutes(Javalin app) {
         // ADD ALL OF YOUR WEBPAGES HERE
-        app.get(PageMain.URL, new PageMain());
-        app.get("/browse/*", new PageBrowseLGAs());
-        app.get("/search/*", new PageSearchLGAs());
+        app.get("/", new PageMain());
+        app.get("/browse*", new PageBrowseLGAs());
+        app.get("/search*", new PageSearchLGAs());
         app.get(PageMission.URL, new PageMission());
     }
 

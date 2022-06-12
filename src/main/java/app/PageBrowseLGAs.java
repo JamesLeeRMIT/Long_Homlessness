@@ -19,7 +19,7 @@ import java.util.HashMap;
 public class PageBrowseLGAs implements Handler {
 
     // URL of this page relative to http://localhost:7001/
-    public static final String URL = "/browseLGAs";
+    public static final String URL = "/browse/*";
 
     @Override
     public void handle(Context context) throws Exception {
@@ -28,7 +28,7 @@ public class PageBrowseLGAs implements Handler {
         JDBCConnection jdbc = new JDBCConnection();
 
 
-        String state = context.path().substring(8);
+        String state = context.path().substring(7);
 
         String[] states = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9"};
         ArrayList<String> statesli = new ArrayList<String>(Arrays.asList(states));
@@ -46,7 +46,7 @@ public class PageBrowseLGAs implements Handler {
             model.put("lgas", lgas);
 
             // render the template
-            context.render("pages/stateView.html", model);
+            context.render("pages/browseLGAs.html", model);
         } else {
             // Get stuff from the database
 
