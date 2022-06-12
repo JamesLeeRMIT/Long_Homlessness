@@ -1,6 +1,5 @@
 app/Homeless.class
 app/Data.class
 app/JDBCConnection.class
-app/Population.class
 app/ImportData.class
 app/App.class

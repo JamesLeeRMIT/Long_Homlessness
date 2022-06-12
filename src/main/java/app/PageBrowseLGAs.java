@@ -1,6 +1,7 @@
 package app;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import io.javalin.http.Context;
 import io.javalin.http.Handler;
@@ -26,14 +27,36 @@ public class PageBrowseLGAs implements Handler {
         // First we need to use your JDBCConnection class
         JDBCConnection jdbc = new JDBCConnection();
 
-        // Get stuff from the database
 
-        // the context stuff we put in the template
-        HashMap<String, Object> model = new HashMap<>();
+        String state = context.path().substring(8);
+
+        String[] states = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9"};
+        ArrayList<String> statesli = new ArrayList<String>(Arrays.asList(states));
 
 
-        // render the template
-        context.render("pages/browseLGAs.html", model);
+        if (statesli.contains(state)) {
+            // Get stuff from the database
+            ArrayList<Homeless> lgas = new ArrayList<Homeless>();
+
+            lgas = jdbc.getLgaState(state);
+
+
+            // the context stuff we put in the template
+            HashMap<String, Object> model = new HashMap<>();
+            model.put("lgas", lgas);
+
+            // render the template
+            context.render("pages/stateView.html", model);
+        } else {
+            // Get stuff from the database
+
+            // the context stuff we put in the template
+            HashMap<String, Object> model = new HashMap<>();
+
+
+            // render the template
+            context.render("pages/browseLGAs.html", model);
+        }
     }
 
 }
