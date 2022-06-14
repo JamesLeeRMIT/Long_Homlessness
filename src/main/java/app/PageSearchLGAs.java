@@ -31,8 +31,8 @@ public class PageSearchLGAs implements Handler {
 
         String lga_code = context.path();
 
-        home = jdbc.getLga(lga_code.substring(7));
-        System.out.println(lga_code.substring(7));
+        home = jdbc.getLga(lga_code.substring(8));
+        System.out.println(lga_code.substring(8));
 
 
         // the context stuff we put in the template

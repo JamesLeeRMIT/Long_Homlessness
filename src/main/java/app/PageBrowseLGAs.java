@@ -28,7 +28,7 @@ public class PageBrowseLGAs implements Handler {
         JDBCConnection jdbc = new JDBCConnection();
 
 
-        String state = context.path().substring(7);
+        String state = context.path().substring(8);
 
         String[] states = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9"};
         ArrayList<String> statesli = new ArrayList<String>(Arrays.asList(states));
