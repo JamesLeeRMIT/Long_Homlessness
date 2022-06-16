@@ -14,24 +14,24 @@
     </head>
     <body>
         <div layout:fragment="contents">
-            <div class='topnav'>
-                <img src='/logo.png' href='/' class='left-image' alt='Logo of Re:Thinking Homelessness' height=50>
+            <div id='browsetopnav' class='topnav'>
+                <a href='/'><img src='/logo.png' class='left-image' alt='Logo of Re:Thinking Homelessness' height=50></a>
                 <a href='/' class = 'topnav-button'>Home</a>
                 <a href='/mission' class = 'topnav-button'>Mission</a>
                 <a href='/browse/' class = 'topnav-button'>Browse LGAs</a>
             </div>
-            <div class="sidenav">
-                <a href="/browse/1">VIC</a>
-                <a href="/browse/2">NSW</a>
-                <a href="/browse/3">QLD</a>
-                <a href="/browse/4">SA</a>
-                <a href="/browse/5">NT</a>
-                <a href="/browse/6">WA</a>
-                <a href="/browse/7">TAS</a>
+            <div id='browsesidenav' class="sidenav">
+                <a class = 'sidenav-button' href="/browse/1">VIC</a>
+                <a class = 'sidenav-button' href="/browse/2">NSW</a>
+                <a class = 'sidenav-button' href="/browse/3">QLD</a>
+                <a class = 'sidenav-button' href="/browse/4">SA</a>
+                <a class = 'sidenav-button' href="/browse/5">NT</a>
+                <a class = 'sidenav-button' href="/browse/6">WA</a>
+                <a class = 'sidenav-button' href="/browse/7">TAS</a>
             </div>
 
-            <div class="content" id="withsidenav">
-                <h1>Browse Lgas</h1>
+            <div class="content" id="contentbrowse">
+                <h1 id="ontable">Browse Lgas</h1>
 
                 <table class="table table-striped table-bordered" id="sortTable">
                     <thead>
@@ -61,7 +61,7 @@
 
 
                 <div class='footer' id="withsidenav">
-                    <p>COSC-2803 Social Challange Portfolio</p>
+                    <p id="browsefooter">COSC-2803 Social Challange Portfolio</p>
                 </div>
             </div>
         </div>
