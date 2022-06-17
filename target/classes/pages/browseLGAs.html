@@ -31,31 +31,38 @@
             </div>
 
             <div class="content" id="contentbrowse">
-                <h1 id="ontable">Browse Lgas</h1>
+                <div class="flex-container">
+                    <h1 id="ontable">Browse Lgas</h1>
 
-                <table class="table table-striped table-bordered" id="sortTable">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>LGA Code</th>
-                            <th>Population 2016</th>
-                            <th>Population 2018</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr th:each="lga : ${lgas}">
-                            <td><a th:text="${lga.lga_name}" th:href="@{'/search/' +${lga.lga_code}}">Onions</a></td>
-                            <td th:text="${lga.lga_code}">Onions</td>
-                            <td th:text="${lga.pop16}">Onions</td>
-                            <td th:text="${lga.pop18}">Onions</td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <table class="table table-striped table-bordered" id="sortTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Population 2016</th>
+                                <th>Population 2018</th>
+                                <th>Homeless 2016</th>
+                                <th>Homeless 2018</th>
+                                <th>At Risk 2016</th>
+                                <th>At Risk 2018</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="lga : ${lgas}">
+                                <td><a th:text="${lga.lga_name}" th:href="@{'/search/' +${lga.lga_code}}">Onions</a></td>
+                                <td th:text="${lga.pop16}">Onions</td>
+                                <td th:text="${lga.pop18}">Onions</td>
+                                <td th:text="${lga.homeless16}">Onions</td>
+                                <td th:text="${lga.homeless18}">Onions</td>
+                                <td th:text="${lga.atRisk16}">Onions</td>
+                                <td th:text="${lga.atRisk18}">Onions</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                <script>
-                $('#sortTable').DataTable();
-                </script>
-
+                    <script>
+                    $('#sortTable').DataTable();
+                    </script>
+                </div>
             </div>
 
 

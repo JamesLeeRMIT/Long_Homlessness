@@ -67,6 +67,11 @@ public class JDBCConnection {
     public ArrayList<Homeless> getAllHomeless() {
         ArrayList<Homeless> homeli = new ArrayList<Homeless>();
 
+        int homeless16;
+        int homeless18;
+        int atRisk16;
+        int atRisk18;
+
         // Setup the variable for the JDBC connection
         Connection connection = null;
 
@@ -90,6 +95,11 @@ public class JDBCConnection {
             while (results.next()) {
                 Statement statement2 = connection.createStatement();
                 statement2.setQueryTimeout(30);
+
+                homeless16 = 0;
+                homeless18 = 0;
+                atRisk16 = 0;
+                atRisk18 = 0;
 
                 // Create a Movie Object
                 Homeless home = new Homeless();
@@ -128,13 +138,31 @@ public class JDBCConnection {
 
                     if (datares.getInt("year") == 2016) {
                         data16.add(data);
+
+                        if (data.status == 0) {
+                            homeless16 += data.num;
+                        } else {
+                            atRisk16 += data.num;
+                        }
                     } else {
                         data18.add(data);
+
+                        if (data.status == 0) {
+                            homeless18 += data.num;
+                        } else {
+                            atRisk18 += data.num;
+                        }
                     }
                 }
 
+                home.homeless16 = homeless16;
+                home.homeless18 = homeless18;
+                home.atRisk18 = atRisk18;
+                home.atRisk16 = atRisk16;
+
                 home.data16 = data16;
                 home.data18 = data18;
+
 
                 // Add the movie object to the array
                 homeli.add(home);
@@ -167,6 +195,11 @@ public class JDBCConnection {
     public Homeless getLga(String lga_code) {
         Homeless home = new Homeless();
 
+        int homeless16;
+        int homeless18;
+        int atRisk16;
+        int atRisk18;
+
         // Setup the variable for the JDBC connection
         Connection connection = null;
 
@@ -188,7 +221,13 @@ public class JDBCConnection {
             // The "results" variable is similar to an array
             // We can iterate through all of the database query results
             while (results.next()) {
-                // Create a Movie Object
+                Statement statement2 = connection.createStatement();
+                statement2.setQueryTimeout(30);
+
+                homeless16 = 0;
+                homeless18 = 0;
+                atRisk16 = 0;
+                atRisk18 = 0;
 
 
                 ArrayList<Data> data16 = new ArrayList<Data>();
@@ -212,7 +251,7 @@ public class JDBCConnection {
                 query = "Select * from data where lga_code =" + home.lga_code;
 
                 // Get Result
-                ResultSet datares = statement.executeQuery(query);
+                ResultSet datares = statement2.executeQuery(query);
 
                 while (datares.next()) {
                     Data data = new Data();
@@ -225,15 +264,34 @@ public class JDBCConnection {
 
                     if (datares.getInt("year") == 2016) {
                         data16.add(data);
+
+                        if (data.status == 0) {
+                            homeless16 += data.num;
+                        } else {
+                            atRisk16 += data.num;
+                        }
                     } else {
                         data18.add(data);
+
+                        if (data.status == 0) {
+                            homeless18 += data.num;
+                        } else {
+                            atRisk18 += data.num;
+                        }
                     }
                 }
+
+                home.homeless16 = homeless16;
+                home.homeless18 = homeless18;
+                home.atRisk18 = atRisk18;
+                home.atRisk16 = atRisk16;
 
                 home.data16 = data16;
                 home.data18 = data18;
 
+
                 // Add the movie object to the array
+                statement2.close();
             }
 
             // Close the statement because we are done with it
@@ -262,6 +320,11 @@ public class JDBCConnection {
     public ArrayList<Homeless> getLgaState(String stateCode) {
         ArrayList<Homeless> homeli = new ArrayList<Homeless>();
 
+        int homeless16;
+        int homeless18;
+        int atRisk16;
+        int atRisk18;
+
         // Setup the variable for the JDBC connection
         Connection connection = null;
 
@@ -283,9 +346,13 @@ public class JDBCConnection {
             // The "results" variable is similar to an array
             // We can iterate through all of the database query results
             while (results.next()) {
-
                 Statement statement2 = connection.createStatement();
                 statement2.setQueryTimeout(30);
+
+                homeless16 = 0;
+                homeless18 = 0;
+                atRisk16 = 0;
+                atRisk18 = 0;
 
                 // Create a Movie Object
                 Homeless home = new Homeless();
@@ -324,13 +391,31 @@ public class JDBCConnection {
 
                     if (datares.getInt("year") == 2016) {
                         data16.add(data);
+
+                        if (data.status == 0) {
+                            homeless16 += data.num;
+                        } else {
+                            atRisk16 += data.num;
+                        }
                     } else {
                         data18.add(data);
+
+                        if (data.status == 0) {
+                            homeless18 += data.num;
+                        } else {
+                            atRisk18 += data.num;
+                        }
                     }
                 }
 
+                home.homeless16 = homeless16;
+                home.homeless18 = homeless18;
+                home.atRisk18 = atRisk18;
+                home.atRisk16 = atRisk16;
+
                 home.data16 = data16;
                 home.data18 = data18;
+
 
                 // Add the movie object to the array
                 homeli.add(home);

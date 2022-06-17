@@ -23,7 +23,7 @@ img.left-image {
   padding: 5px;
   margin-left: 0px;
 }
- 
+
  .topnav-button {
   float: left;
   display: block;
@@ -32,7 +32,7 @@ img.left-image {
   padding: 14px 16px;
   text-decoration: none;
  }
- 
+
  .topnav a:hover {
    background-color: #ddd;
    color: black;
@@ -67,7 +67,7 @@ img.left-image {
   padding: 14px 16px;
   text-decoration: none;
  }
- 
+
  .sidenav a:hover {
    background-color: #ddd;
    color: black;
@@ -197,18 +197,15 @@ img.left-image {
 }
 
 #contentbrowse {
-  height: 782px;
   margin-left: 155px;
   margin-right: 8px;
 }
 
 #sortTable_info {
-  position: absolute;
   bottom: 129px;
 }
 
 #sortTable_paginate {
-  position: absolute;
   bottom: 82px;
 }
 
