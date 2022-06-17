@@ -37,12 +37,53 @@ public class PageBrowseLGAs implements Handler {
         if (statesli.contains(state)) {
             // Get stuff from the database
             ArrayList<Homeless> lgas = new ArrayList<Homeless>();
+            int homeless16 = 0;
+            int homeless18 = 0;
+            int atRisk16 = 0;
+            int atRisk18 = 0;
+            int pop16 = 0;
+            int pop18 = 0;
+            int median_household_weekly_income  = 0;
+            int median_age  = 0;
+            int median_mortgage_repay_monthly = 0;
+            int median_rent_weekly = 0;
 
             lgas = jdbc.getLgaState(state);
+
+            for (Homeless lga: lgas) {
+                homeless16 += lga.homeless16;
+                homeless18 += lga.homeless18;
+                atRisk18 += lga.atRisk18;
+                atRisk16 += lga.atRisk16;
+                pop16 += lga.pop16;
+                pop18 += lga.pop18;
+                median_household_weekly_income += lga.median_household_weekly_income;
+                median_age += lga.median_age;
+                median_mortgage_repay_monthly += lga.median_mortgage_repay_monthly;
+                median_rent_weekly += lga.median_rent_weekly;
+            }
+
+            median_household_weekly_income = median_household_weekly_income/ lgas.size();
+            median_age = median_age/ lgas.size();
+            median_mortgage_repay_monthly = median_mortgage_repay_monthly/ lgas.size();
+            median_rent_weekly = median_rent_weekly/ lgas.size();
 
 
             // the context stuff we put in the template
             HashMap<String, Object> model = new HashMap<>();
+
+            model.put("homeless16", homeless16);
+            model.put("homeless18", homeless18);
+            model.put("atRisk18", atRisk18);
+            model.put("atRisk16", atRisk16);
+            model.put("pop16", pop16);
+            model.put("pop18", pop18);
+            model.put("median_household_weekly_income", median_household_weekly_income);
+            model.put("median_age", median_age);
+            model.put("median_mortgage_repay_monthly", median_mortgage_repay_monthly);
+            model.put("median_rent_weekly", median_rent_weekly);
+
+
             model.put("lgas", lgas);
 
             // render the template
@@ -52,10 +93,51 @@ public class PageBrowseLGAs implements Handler {
 
             ArrayList<Homeless> lgas = new ArrayList<Homeless>();
 
-            lgas = jdbc.getAllHomeless();
+            int homeless16 = 0;
+            int homeless18 = 0;
+            int atRisk16 = 0;
+            int atRisk18 = 0;
+            int pop16 = 0;
+            int pop18 = 0;
+            int median_household_weekly_income  = 0;
+            int median_age  = 0;
+            int median_mortgage_repay_monthly = 0;
+            int median_rent_weekly = 0;
+
+            lgas = jdbc.getLgaState(state);
+
+            for (Homeless lga: lgas) {
+                homeless16 += lga.homeless16;
+                homeless18 += lga.homeless18;
+                atRisk18 += lga.atRisk18;
+                atRisk16 += lga.atRisk16;
+                pop16 += lga.pop16;
+                pop18 += lga.pop18;
+                median_household_weekly_income += lga.median_household_weekly_income;
+                median_age += lga.median_age;
+                median_mortgage_repay_monthly += lga.median_mortgage_repay_monthly;
+                median_rent_weekly += lga.median_rent_weekly;
+            }
+
+            median_household_weekly_income = median_household_weekly_income/ lgas.size();
+            median_age = median_age/ lgas.size();
+            median_mortgage_repay_monthly = median_mortgage_repay_monthly/ lgas.size();
+            median_rent_weekly = median_rent_weekly/ lgas.size();
 
             // the context stuff we put in the template
             HashMap<String, Object> model = new HashMap<>();
+
+            model.put("homeless16", homeless16);
+            model.put("homeless18", homeless18);
+            model.put("atRisk18", atRisk18);
+            model.put("atRisk16", atRisk16);
+            model.put("pop16", pop16);
+            model.put("pop18", pop18);
+            model.put("median_household_weekly_income", median_household_weekly_income);
+            model.put("median_age", median_age);
+            model.put("median_mortgage_repay_monthly", median_mortgage_repay_monthly);
+            model.put("median_rent_weekly", median_rent_weekly);
+
             model.put("lgas", lgas);
 
 

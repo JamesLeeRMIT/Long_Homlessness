@@ -87,6 +87,17 @@ img.left-image {
   height: 100%;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+.years {
+    margin: 20px;
+    background-color: #ddd;
+}
+
 #browsetopnav {
   margin: 8px;
   padding-bottom: 3px;
