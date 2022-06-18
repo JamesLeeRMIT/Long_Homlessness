@@ -90,12 +90,19 @@ img.left-image {
 .flex-container {
   display: flex;
   flex-direction: row;
-  margin: 20px;
+  margin: 0px;
+  margin-bottom: -47px;
 }
 
 .years {
-    margin: 20px;
-    background-color: #ddd;
+  margin: 20px;
+  background-color: #ddd;
+  margin-right: 150px;
+  position: relative;
+  left: 496px;
+  display: inline-block;
+  top: -62px;
+  text-align: center;
 }
 
 #browsetopnav {
@@ -178,6 +185,16 @@ img.left-image {
   font-size: 20px;
 }
 
+.browsenumbers {
+  margin-top: -15px;
+}
+
+.browsetitle {
+  left: 862px;
+  position: relative;
+  top: -58px;
+}
+
 #ontable {
   margin-bottom: 21px;
 }
@@ -227,4 +244,8 @@ img.left-image {
   text-decoration: none;
   background-color: #333;
   cursor:default;
+}
+
+.QuickFacts{
+  margin-bottom: -121px;
 }
