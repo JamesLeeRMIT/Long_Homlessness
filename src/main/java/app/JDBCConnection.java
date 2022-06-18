@@ -15,6 +15,7 @@ import java.sql.Statement;
  * @author Timothy Wiley, 2022. email: timothy.wiley@rmit.edu.au
  * @author Santha Sumanasekara, 2021. email: santha.sumanasekara@rmit.edu.au
  */
+
 public class JDBCConnection {
 
     // Name of database file (contained in database folder)
@@ -444,5 +445,4 @@ public class JDBCConnection {
 
     }
 
-    // TODO: Keep adding more methods here to answer all of the questions from the Studio Class activities
 }

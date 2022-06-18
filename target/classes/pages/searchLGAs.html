@@ -17,10 +17,10 @@
 
     <div class='content'>
 
-        <p th:text="${home.lga_name}"></p>
-        <p th:text="${home.lga_code}"></p>
-        <p th:text="${home.pop16}"></p>
-        <p th:text="${home.pop18}"></p>
+        <h1 th:text="${home.lga_name}"></h1>
+        <h2 th:text="'LGA Code: ' + ${home.lga_code}"></h2>
+        <p th:text="'Homless and at risk population (2016): ' + ${home.pop16}"></p>
+        <p th:text="'Homless and at risk population (2018): ' + ${home.pop18}"></p>
 
         <table>
           <tr>
