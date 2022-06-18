@@ -231,6 +231,30 @@ img.left-image {
   cursor:default;
 }
 
+.search-titles {
+  display: block;
+  text-align: center;
+  width: 455px;
+  position: relative;
+  left: 267px;
+  top: 144px;
+}
+
+.search-lga_map {
+  position: relative;
+  float: right;
+  top: -348px;
+  height: 388px;
+  right: -838px;
+}
+
+.search-table {
+  position: relative;
+  left: 555px;
+  top: -166px;
+}
+
+
 .footer {
   background-color: #cccccc;
   padding: 1px 10px 1px 10px;
