@@ -87,39 +87,6 @@ img.left-image {
   height: 100%;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  margin: 0px;
-  margin-bottom: -47px;
-}
-
-.years {
-  margin: 20px;
-  background-color: #ddd;
-  margin-right: 150px;
-  position: relative;
-  left: 496px;
-  display: inline-block;
-  top: -62px;
-  text-align: center;
-}
-
-#browsetopnav {
-  margin: 8px;
-  padding-bottom: 3px;
-}
-
-#browsesidenav {
-  margin-left: 17px;
-  padding-bottom: 20px;
-  height: 835px;
-  margin-top: 2px;
-  width: 136px;
-  text-align: center;
-  font-size: 21px;
-}
-
 #withsidenav {
   margin-left: 155px;
   margin-right: 8px;
@@ -185,29 +152,60 @@ img.left-image {
   font-size: 20px;
 }
 
-.browsenumbers {
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  margin-bottom: -47px;
+}
+
+.years {
+  margin: 20px;
+  background-color: #ddd;
+  margin-right: 150px;
+  position: relative;
+  left: 496px;
+  display: inline-block;
+  top: -62px;
+  text-align: center;
+}
+
+#browse-topnav {
+  margin: 8px;
+  padding-bottom: 3px;
+}
+
+#browse-sidenav {
+  margin-left: 17px;
+  padding-bottom: 20px;
+  height: 835px;
+  margin-top: 2px;
+  width: 136px;
+  text-align: center;
+  font-size: 21px;
+}
+
+.browse-numbers {
   margin-top: -15px;
 }
 
-.browsetitle {
+.browse-title {
   left: 862px;
   position: relative;
   top: -58px;
 }
 
-#ontable {
-  margin-bottom: 21px;
+#browse-content {
+  margin-left: 155px;
+  margin-right: 8px;
 }
 
-.footer {
-  background-color: #cccccc;
-  padding: 1px 10px 1px 10px;
-  margin-top: 10px;
+#sortTable_info {
+  bottom: 129px;
 }
 
-#browsefooter {
-  margin-top: 8px;
-  margin-bottom: 8px;
+#sortTable_paginate {
+  bottom: 82px;
 }
 
 #sortTable_paginate a {
@@ -224,19 +222,6 @@ img.left-image {
   cursor: pointer;
 }
 
-#contentbrowse {
-  margin-left: 155px;
-  margin-right: 8px;
-}
-
-#sortTable_info {
-  bottom: 129px;
-}
-
-#sortTable_paginate {
-  bottom: 82px;
-}
-
 .ellipsis {
   display: inline-block;
   color: #FFF;
@@ -246,6 +231,8 @@ img.left-image {
   cursor:default;
 }
 
-.QuickFacts{
-  margin-bottom: -121px;
+.footer {
+  background-color: #cccccc;
+  padding: 1px 10px 1px 10px;
+  margin-top: 10px;
 }
