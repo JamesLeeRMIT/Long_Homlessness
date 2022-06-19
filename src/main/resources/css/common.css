@@ -163,7 +163,7 @@ img.left-image {
   margin: 20px;
   margin-right: 150px;
   position: relative;
-  left: 496px;
+  left: 468px;
   display: inline-block;
   top: -62px;
   text-align: center;
@@ -208,9 +208,18 @@ img.left-image {
 }
 
 .browse-title {
-  left: 862px;
+  left: 834px;
   position: relative;
   top: -58px;
+  width: 186px;
+}
+
+.browse-rowwidth {
+  width: 120px;
+}
+
+#center {
+  text-align: center;
 }
 
 #sortTable_info {
