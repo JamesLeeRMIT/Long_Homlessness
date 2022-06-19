@@ -272,8 +272,13 @@ img.left-image {
 
 .search-table {
   position: relative;
-  left: 555px;
+  left: 450px;
   top: -166px;
+  text-align: center;
+}
+
+.search-facts {
+  font-size: 20px;
 }
 
 

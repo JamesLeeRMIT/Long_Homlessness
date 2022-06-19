@@ -31,15 +31,21 @@
 
       <table class="search-table">
         <td style="padding-right: 500px;">
-          <p>2016 figures</p>
-          <p>Amount homeless</p>
-          <p>Amount at risk</p>
-          <p>Ratio of male to female</p>
-          <p>Median rent</p>
-          <p>Median weekly income</p>
+          <h1 style="top: -70px; position: relative;">2016 figures</h1>
+          <div style="top: -70px; position: relative;" class="search-facts">
+            <p th:text="'Amount homeless: ' + ${home.homeless16}"></p>
+            <p th:text="'Amount at risk: ' + ${home.atRisk16}"></p>
+          </div>
         </td>
-        <td>
-          <p>right thing</p>
+        <td style="position: relative; top: -16px;">
+          <h1>2018 figures</h1>
+          <div class="search-facts">
+            <p th:text="'Amount homeless: ' + ${home.homeless18}"></p>
+            <p th:text="'Amount at risk: ' + ${home.atRisk18}"></p>
+            <p th:text="'Median rent: $' + ${home.median_rent_weekly}"></p>
+            <p th:text="'Median weekly income: $' + ${home.median_household_weekly_income}"></p>
+            <p th:text="'Median mortgage repay monthly: $' + ${home.median_mortgage_repay_monthly}"></p>
+          </div>
         </td>
       </table>
 
