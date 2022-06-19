@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html
-        xmlns:th="http://www.thymeleaf.org"
-        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-<head>
-    <title>Rethinking Homelessness: Home</title>
-    <link rel='stylesheet' type='text/css' href='/common.css' />
-</head>
-<body>
-<div layout:fragment="contents">
-    <div class='topnav'>
-        <a href='/'><img src='/logo.png' class='left-image' alt='Logo of Re:Thinking Homelessness' height=50></a>
-        <a href='/' class = 'topnav-button'>Home</a>
-        <a href='/mission' class = 'topnav-button'>Mission</a>
-        <a href='/browse/' class = 'topnav-button'>Browse LGAs</a>
-    </div>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
+<head>
+  <title>Rethinking Homelessness: Home</title>
+  <link rel='stylesheet' type='text/css' href='/common.css' />
+</head>
+
+<body>
+  <div layout:fragment="contents">
+    <div class='topnav'>
+      <a href='/'><img src='/logo.png' class='left-image' alt='Logo of Re:Thinking Homelessness' height=50></a>
+      <a href='/' class='topnav-button'>Home</a>
+      <a href='/mission' class='topnav-button'>Mission</a>
+      <a href='/browse/' class='topnav-button'>Browse LGAs</a>
+    </div>
     <div class='content'>
       <div class='search-titles'>
         <h1 style="font-size-adjust:1" th:text="${home.lga_name}"></h1>
@@ -23,10 +22,11 @@
         <ul style="font-size: 20px">
           <li th:text="'Homless and at risk population (2016): ' + ${home.pop16}"></li>
           <li th:text="'Homless and at risk population (2018): ' + ${home.pop18}"></li>
-          <li th:text="((${home.pop16} &gt; ${home.pop18})? 'Decrease' : 'Increase') + ' in homeless and at risk by ' + ((${home.pop16} &gt; ${home.pop18})? (${home.pop16} - ${home.pop18}) : (${home.pop18} - ${home.pop16}))"></li>
+          <li
+            th:text="((${home.pop16} &gt; ${home.pop18})? 'Decrease' : 'Increase') + ' in homeless and at risk by ' + ((${home.pop16} &gt; ${home.pop18})? (${home.pop16} - ${home.pop18}) : (${home.pop18} - ${home.pop16}))">
+          </li>
         </ul>
         <img class="search-lga_map" th:src="'/LGAs/' + ${home.lga_code} + '.png'">
-
       </div>
       <table class="search-table">
         <td style="padding-right: 400px;">
@@ -47,12 +47,11 @@
           </div>
         </td>
       </table>
-
     </div>
-
     <div class='footer'>
-        <p>COSC-2803 Social Challange Portfolio</p>
+      <p>COSC-2803 Social Challange Portfolio</p>
     </div>
-</div>
+  </div>
 </body>
+
 </html>

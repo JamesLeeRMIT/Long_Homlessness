@@ -1,49 +1,55 @@
 <!DOCTYPE html>
-<html
-        xmlns:th="http://www.thymeleaf.org"
-        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
 <head>
     <title>Rethinking Homelessness: Home</title>
     <link rel='stylesheet' type='text/css' href='common.css' />
 </head>
+
 <body>
-<div layout:fragment="contents">
-    <div class='topnav'>
-        <a href='/'><img src='/logo.png' class='left-image' alt='Logo of Re:Thinking Homelessness' height=50></a>
-        <a href='/' class = 'topnav-button'>Home</a>
-        <a href='/mission' class = 'topnav-button'>Mission</a>
-        <a href='/browse/' class = 'topnav-button'>Browse LGAs</a>
-    </div>
+    <div layout:fragment="contents">
+        <div class='topnav'>
+            <a href='/'><img src='/logo.png' class='left-image' alt='Logo of Re:Thinking Homelessness' height=50></a>
+            <a href='/' class='topnav-button'>Home</a>
+            <a href='/mission' class='topnav-button'>Mission</a>
+            <a href='/browse/' class='topnav-button'>Browse LGAs</a>
+        </div>
 
-    <div class='content'>
-        <div id="facts">
-            <div id="fact1" class="fact">
-                <h1><i>Fact #1</i></h1>
-                <p>Between 2016 and 2018, the total homelessness and at risk population of Australia fell by %0.23, showing that although it is falling, it is not fast enough.</p>
+        <div class='content'>
+            <div id="facts">
+                <div id="fact1" class="fact">
+                    <h1><i>Fact #1</i></h1>
+                    <p>Between 2016 and 2018, the total homelessness and at risk population of Australia fell by %0.23,
+                        showing that although it is falling, it is not fast enough.</p>
+                </div>
+                <div id="fact2" style="top: -20px;" class="fact">
+                    <h1><i>Fact #2</i></h1>
+                    <p>Between both 2016 and 2018, women have made up to two thirds of those who are at risk or already
+                        homeless.</p>
+                </div>
+                <div id="fact3" style="top: -20px;" class="fact">
+                    <h1><i>Fact #3</i></h1>
+                    <p>Throughout 2018, the average household weekly income is $1296, with weekly rent along averaging
+                        out to around %17 of that.</p>
+                </div>
             </div>
-            <div id="fact2" style="top: -20px;" class="fact">
-                <h1><i>Fact #2</i></h1>
-                <p>Between both 2016 and 2018, women have made up to two thirds of those who are at risk or already homeless.</p>
+            <div class="map">
+                <img src="map.png"
+                    alt='Map of Australia showing how Victoria has greater than 90,000 homeless and at risk, whereas NT, ACT and TAS have around 10,000 or less at risk and homeless'
+                    height=300>
             </div>
-            <div id="fact3" style="top: -20px;" class="fact">
-                <h1><i>Fact #3</i></h1>
-                <p>Throughout 2018, the average household weekly income is $1296, with weekly rent along averaging out to around %17 of that.</p>
+            <div class="numbers">
+                <h2>Total number of LGAs</h2>
+                <p>541</p>
+                <h2>Total population 2018</h2>
+                <p>24,898,153</p>
             </div>
         </div>
-        <div class="map">
-            <img src="map.png" alt='Map of Australia showing how Victoria has greater than 90,000 homeless and at risk, whereas NT, ACT and TAS have around 10,000 or less at risk and homeless' height=300>
-        </div>
-        <div class="numbers">
-            <h2>Total number of LGAs</h2>
-            <p>541</p>
-            <h2>Total population 2018</h2>
-            <p>24,898,153</p>
-        </div>
-    </div>
 
-    <div class='footer'>
-        <p>COSC-2803 Social Challange Portfolio</p>
+        <div class='footer'>
+            <p>COSC-2803 Social Challange Portfolio</p>
+        </div>
     </div>
-</div>
 </body>
+
 </html>

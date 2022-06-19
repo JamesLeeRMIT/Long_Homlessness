@@ -1,52 +1,58 @@
 <!DOCTYPE html>
-<html
-        xmlns:th="http://www.thymeleaf.org"
-        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
 <head>
     <title>Rethinking Homelessness: Home</title>
     <link rel='stylesheet' type='text/css' href='common.css' />
 </head>
+
 <body>
-<div layout:fragment="contents">
-    <div class='topnav'>
-        <a href='/'><img src='/logo.png' class='left-image' alt='Logo of Re:Thinking Homelessness' height=50></a>
-        <a href='/' class = 'topnav-button'>Home</a>
-        <a href='/mission' class = 'topnav-button'>Mission</a>
-        <a href='/browse/' class = 'topnav-button'>Browse LGAs</a>
+    <div layout:fragment="contents">
+        <div class='topnav'>
+            <a href='/'><img src='/logo.png' class='left-image' alt='Logo of Re:Thinking Homelessness' height=50></a>
+            <a href='/' class='topnav-button'>Home</a>
+            <a href='/mission' class='topnav-button'>Mission</a>
+            <a href='/browse/' class='topnav-button'>Browse LGAs</a>
+        </div>
+
+        <div class='content'>
+
+            <table>
+                <th>
+                    <div class='creators'>
+                        <h1>Creators</h1>
+                        <img src='creator1.jpeg' class='creatorImg' href='/'
+                            alt="Image of one of the creators of this website, James">
+                        <h3 class="creatorName">James Lee</h3>
+                        <img src='creator2.jpeg' class='creatorImg' href='/'
+                            alt="Image of the other creator of this website, Ben">
+                        <h3 class="creatorName">Benjamin Rycroft</h3>
+                    </div>
+                </th>
+                <th>
+                    <div class='missionStatement'>
+                        <h1>Our Mission</h1>
+                        <p>
+                            For this website, our mission was to create an easy to use interface which highlights the
+                            issue of homelessness beyond simply the
+                            instances you can see. Although the data we use is already avaliable to the public, it is
+                            tucked away behind a veil of
+                            clutter and confusion.
+
+                            <br><br>Re:Thinking Homelessness will hopefully remove that veil to help enlighten those who
+                            wish to learn more about
+                            this horrible issue plaguing our country
+                        </p>
+                    </div>
+                </th>
+
+            </table>
+        </div>
+
+        <div class='footer'>
+            <p>COSC-2803 Social Challange Portfolio</p>
+        </div>
     </div>
-
-    <div class='content'>
-
-        <table>
-            <th>
-                <div class='creators'>
-                    <h1>Creators</h1>
-                    <img src='creator1.jpeg' class='creatorImg' href='/' alt="Image of one of the creators of this website, James">
-                    <h3 class="creatorName">James Lee</h3>
-                    <img src='creator2.jpeg' class='creatorImg' href='/' alt="Image of the other creator of this website, Ben">
-                    <h3 class="creatorName">Benjamin Rycroft</h3>
-                </div>
-            </th>
-            <th>
-                <div class='missionStatement'>
-                    <h1>Our Mission</h1>
-                    <p>
-                        For this website, our mission was to create an easy to use interface which highlights the issue of homelessness beyond simply the 
-                        instances you can see. Although the data we use is already avaliable to the public, it is tucked away behind a veil of 
-                        clutter and confusion. 
-                        
-                        <br><br>Re:Thinking Homelessness will hopefully remove that veil to help enlighten those who wish to learn more about 
-                        this horrible issue plaguing our country
-                    </p>
-                </div>
-            </th>
-
-        </table>
-    </div>
-
-    <div class='footer'>
-        <p>COSC-2803 Social Challange Portfolio</p>
-    </div>
-</div>
 </body>
+
 </html>
