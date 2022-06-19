@@ -23,7 +23,7 @@
         <ul style="font-size: 20px">
           <li th:text="'Homless and at risk population (2016): ' + ${home.pop16}"></li>
           <li th:text="'Homless and at risk population (2018): ' + ${home.pop18}"></li>
-          <li th:text="((${home.pop16} &gt; ${home.pop18})? 'Decrease' : 'Increase') + ' in homeless & at risk by ' + ((${home.pop16} &gt; ${home.pop18})? (${home.pop16} - ${home.pop18}) : (${home.pop18} - ${home.pop16}))"></li>
+          <li th:text="((${home.pop16} &gt; ${home.pop18})? 'Decrease' : 'Increase') + ' in homeless and at risk by ' + ((${home.pop16} &gt; ${home.pop18})? (${home.pop16} - ${home.pop18}) : (${home.pop18} - ${home.pop16}))"></li>
         </ul>
         <img class="search-lga_map" th:src="'/LGAs/' + ${home.lga_code} + '.png'">
 
@@ -31,7 +31,12 @@
 
       <table class="search-table">
         <td style="padding-right: 500px;">
-          <p>left thing</p>
+          <p>2016 figures</p>
+          <p>Amount homeless</p>
+          <p>Amount at risk</p>
+          <p>Ratio of male to female</p>
+          <p>Median rent</p>
+          <p>Median weekly income</p>
         </td>
         <td>
           <p>right thing</p>
